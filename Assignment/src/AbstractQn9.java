@@ -1,7 +1,11 @@
 abstract class Employee {
+    public String name;
+    public double grosssalary;
+    public double tax;
     public abstract double netSalary(double grossSalary, double tax);
 
     public void display(String name) {
+        this.name=name;
         System.out.println(" The Employee name is "+name);
     }
 
@@ -9,9 +13,11 @@ abstract class Employee {
 class Manager extends Employee{
     
     public double netSalary(double grossSalary, double tax) {
+        this.grossSalary=grossSalary;
+        this.tax=tax;
         return (grossSalary - tax);
     }
-
+    @Override
     public void display(String name) {
         System.out.println("The Manager name is "+name);
     }
@@ -19,6 +25,8 @@ class Manager extends Employee{
 class Clerk extends Employee{
     
     public double netSalary(double grossSalary, double tax) {
+        this.grossSalary=grossSalary;
+        this.tax=tax;
         return (grossSalary - tax);
     }
 
