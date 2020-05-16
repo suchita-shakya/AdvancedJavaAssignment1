@@ -13,7 +13,7 @@ public class ArthemeticExc {
 				int output=number/divisor;
 				System.out.println("The output of "+number+"/"+divisor+" is "+output);
 			}
-			catch(Exception ae) {
+			catch(ArithmeticException ae) {
 				System.out.println("Number cannot be divided by zero.");
 			}
 			finally {
