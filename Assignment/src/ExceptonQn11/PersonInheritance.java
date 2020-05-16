@@ -2,8 +2,8 @@ package ExceptonQn11;
 
 class Person {
 
-    private String name;
-    private double Salary;
+    public String name;
+    public double Salary;
 
     public Person() {
     }
@@ -16,7 +16,7 @@ class Person {
 class Politician extends Person{
 
    public void Salary(double salary) {
-	   System.out.println("The salary of the is "+salary);
+	   System.out.println("The salary of the"+name+" is "+salary);
    }
 	
 	/*
@@ -29,7 +29,7 @@ class Politician extends Person{
 }
 class Sportsman extends Person{
 	public void Salary(double salary,double tax) {
-		   System.out.println("The salary of the is "+(salary-tax));
+		   System.out.println("The salary of the"+name+" is "+(salary-tax));
 	   }
 	
 	/*
